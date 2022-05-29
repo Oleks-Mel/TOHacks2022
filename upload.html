@@ -21,10 +21,18 @@
                 <h1>Fill out the Form!</h1>
                 <p>By filling out the form, you have sent in your personal information and pictures for a dermatologist to review. They will get back to you as soon as possible.</p>
                 <form action="/action_page.php">
-                    <label for="fname">First name:</label>
+                    <p>First name:</p>
+                    <label for="fname"></label>
                     <input type="text" id="fname" name="fname"><br><br>
-                    <label for="lname">Last name:</label>
+                    <p>Last name:</p>
+                    <label for="lname"></label>
                     <input type="text" id="lname" name="lname"><br><br>
+                    <p>Enter your phone number:</p>
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <p>Write what kind of symptoms you may be experiencing, for example, itchiness, burning sensatoin, dry, etc.</p>
+                    <textarea name="paragraph_text" cols="50" rows="10"></textarea>
+                    <p>Upload images of the targetted area you want help with.</p>
                     <input type="file" id="myFile" name="filename">
                     <input type="submit" value="Submit">
                   </form>

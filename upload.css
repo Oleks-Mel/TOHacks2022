@@ -37,7 +37,7 @@ nav ul li a{
 }
 .row{
     display: flex;
-    height: 40%;
+    height: 60%;
     align-items: center;
 }
 .col{
