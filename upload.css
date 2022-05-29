@@ -6,7 +6,7 @@
 .container{
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/products.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/try.jpg);
     background-position: center;
     background-size: cover;
     padding-left: 4%;
@@ -37,11 +37,11 @@ nav ul li a{
 }
 .row{
     display: flex;
-    height: 88%;
+    height: 40%;
     align-items: center;
 }
 .col{
-    flex-basis: 50%;
+    flex-basis: 90%;
 }
 h1{
     color: #fff;

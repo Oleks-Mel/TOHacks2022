@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Skin Care Clinic</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Skin Care Clinic-Upload</title>
+    <link rel="stylesheet" href="upload.css">
+ 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,33 +10,23 @@
             <p class="websiteIntro">Welcome</p>
             <nav>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="company/about.html">ABOUT</a></li>
-                    <li><a href="company/upload.html">UPLOAD PICTURES</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="upload.html">UPLOAD PICTURES</a></li>
                 </ul>
             </nav>
         </div>
         <div class="row">
             <div class="col">
-                <h1>Skin Care Clinic</h1>
-                <p>Skin Care Clinic is an online blahablhalahlbahlah...</p>
-                <button type="button" onclick="location.href='company/upload.html'">Upload Skin Pictures</button>
-            </div>
-            <div class="col">
-                <div class="card card1">
-                    <h5>1. Identify skin concern</h5>
-                </div>
-                <div class="card card2">
-                    <h5>2. Upload pictures of skin</h5>
-                </div>
-                <div class="card card3">
-                    <h5>3. Dermatologist will anaylze pictures and send comments.</h5>
-                </div>
-                <div class="card card4">
-                    <h5>4. Use recommended products to achieve clear skin!</h5>
-                </div>
+                <h1>Fill out the Form!</h1>
+                <p>By filling out the form, you have sent in your personal information and pictures for a dermatologist to review. They will get back to you as soon as possible.</p>
+
             </div>
         </div>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+          </form>
     </div>
 </body>
 </html>
