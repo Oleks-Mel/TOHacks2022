@@ -1,0 +1,19 @@
+.button{
+    width:150px;
+    height:50px;
+    border:2px solid;
+    border-radius: 10px;
+    background-color: #fff;        
+}
+
+.button > p{
+    text-align: center;
+    font-family: Roboto;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div:hover{
+    background-color: #000;
+    color: #fff;
+}
