@@ -34,28 +34,35 @@ def upload():
 
       if request.files:
 
-         image = request.files["image"]
-
-         print(image)
-
-         #databasePushRequest.pushToDB("'AAAA'", "'BBBB'", "'416-416-4166'" , "'rash, itchy'" , "'images\\1.png'")
-
-         
-         #pushCur = sqlite3.connect('database.db', check_same_thread=False)
-
          clientNum = pushCur.execute('SELECT COUNT(*) FROM clients')
          clientNum = pushCur.fetchone()
          newClientNum = clientNum[0] + 1
          print("current client is " + str(newClientNum))
 
-         fname = "'AAAA'"
-         lname = "'BBBB'"
-         phoneNum = "'4164164166'"
-         symptoms = "'Rash'"
-         imgPath = "'images\\" + str(newClientNum) + ".png'"
+         products = request.form.getlist("input1")
+         print(products)
 
+         fname = products[0]
+         fname = "'" + fname + "'"
+         print(fname)
+
+         lname = products[1]
+         lname = "'" + lname + "'"
+         print(lname)
+
+         phoneNum = products[2]
+         phoneNum = "'" + phoneNum + "'"
+         print(phoneNum)
+
+         symptoms = products[3]
+         symptoms = "'" + symptoms + "'"
+         print(symptoms)
+
+         image = request.files["image"]
+         print(image)
 
          newClientString = "'" + str(newClientNum) + "'"
+         imgPath = "'images\\" + str(newClientNum) + ".png'"
 
          #Converting given data into a string to be inserted into the database
          strCommand = 'INSERT INTO clients VALUES (' + newClientString + ',' + fname + ',' + lname + ',' + phoneNum + ',' + symptoms + ',' + imgPath + ')'
@@ -65,9 +72,10 @@ def upload():
          pushCur.execute(strCommand)
          con.commit()
 
-         image.save(os.path.join(app.config["IMAGE_UPLOADS"], str(newClientNum) + '.png'))
+
          #Renaming and storing image
-         #shutil.move(image, 'images/' + str(newClientNum) + '.png')
+         image.save(os.path.join(app.config["IMAGE_UPLOADS"], str(newClientNum) + '.png'))
+         
 
          return redirect(request.url)
 

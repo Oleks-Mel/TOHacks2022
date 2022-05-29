@@ -27,20 +27,21 @@
                     <p>Skin Care Clinic is an online alternative to your classic dermatologist...</p>
                         <form action="/upload" method="POST" enctype="multipart/form-data">
 
-                                <p>First name:</p>
-                                <label for="fname"></label>
-                                <input type="text" id="fname" name="fname"><br><br>
-                                <p>Last name:</p>
-                                <label for="lname"></label>
-                                <input type="text" id="lname" name="lname"><br><br>
-                                <p>Enter your phone number:</p>
-                                <label for="phone"></label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
-                                <p>Write what kind of symptoms you may be experiencing, for example, itchiness, burning sensatoin, dry, etc.</p>
-                                <textarea name="paragraph_text" cols="50" rows="10"></textarea>
-                                <p>Upload images of the targetted area you want help with.</p>
-                            <div>
-                                <label>Select Image</label>
+                                    <p>First name:</p>
+                                    <label for="fname"></label>
+                                    <input type="text" id="fname" name="input1"><br><br>
+                                    <p>Last name:</p>
+                                    <label for="lname"></label>
+                                    <input type="text" id="lname" name="input1"><br><br>
+                                    <p>Enter your phone number:</p>
+                                    <label for="phone"></label>
+                                    <input type="tel" id="phone" name="input1" pattern="[0-9]{10}">
+                                    <p>Write what kind of symptoms you may be experiencing, for example, itchiness, burning sensatoin, dry, etc.</p>
+                                    <input name="input1"></input>
+
+                                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                                    <p>Upload images of the targetted area you want help with.</p>
+                                <div>
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" name="image" id="image">
                                         <label class="custom-file-input" for="image"></label>
@@ -48,20 +49,6 @@
                                 </div>
                             <button type="submit" class="btn btn-primary">Upload Image</button>
                         </form>
-                </div>
-                <div class="col">
-                    <div class="card card1">
-                        <h5>1. Identify skin concern</h5>
-                    </div>
-                    <div class="card card2">
-                        <h5>2. Upload pictures of skin</h5>
-                    </div>
-                    <div class="card card3">
-                        <h5>3. Dermatologist will anaylze pictures and send comments.</h5>
-                    </div>
-                    <div class="card card4">
-                        <h5>4. Use recommended products to achieve clear skin!</h5>
-                    </div>
                 </div>
             </div>
         </div>
