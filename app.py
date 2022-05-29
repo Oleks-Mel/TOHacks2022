@@ -16,8 +16,12 @@ def home():
 def about():
    return render_template('about.html')
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET'])
 def upload():
+   #uploaded_file = request.files['file']
+   #if(uploaded_file.filename != ''):
+      #uploaded_file.save(uploaded_file.filename)
+      #print(uploaded_file.filename)
    #databasePushRequest.pushToDB("'AAAA'", "'BBBB'", "'416-416-4166'" , "'rash, itchy'" , "'images\\1.png'")
    return render_template('upload.html')
 
